@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Blog Posts | Christian Rock</title>
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 2em;
+      margin: 2em 0;
+    }
+    
+    .blog-card {
+      background: rgba(0, 191, 255, 0.05);
+      border: 1px solid #00ff00;
+      border-radius: 10px;
+      padding: 1.5em;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .blog-card:hover {
+      background: rgba(0, 191, 255, 0.1);
+      box-shadow: 0 0 20px rgba(0, 191, 255, 0.3);
+      transform: translateY(-5px);
+    }
+    
+    .blog-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: #00ff00;
+    }
+    
+    .blog-image {
+      width: 100%;
+      height: 200px;
+      background: rgba(0, 191, 255, 0.1);
+      border-radius: 8px;
+      margin-bottom: 1em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3em;
+      color: #00bfff;
+      text-shadow: 0 0 10px rgba(0, 191, 255, 0.5);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .blog-image::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 255, 0, 0.1);
+    }
+    
+    .blog-image.fullstack::before {
+      content: '⚛️';
+      font-size: 4em;
+    }
+    
+    .blog-image.automation::before {
+      content: '⚙️';
+      font-size: 4em;
+    }
+    
+    .blog-title {
+      color: #ff0080;
+      font-size: 1.3em;
+      font-weight: bold;
+      margin-bottom: 0.5em;
+      text-shadow: 0 0 5px rgba(255, 0, 128, 0.3);
+    }
+    
+    .blog-description {
+      color: #00bfff;
+      line-height: 1.5;
+      margin-bottom: 1em;
+    }
+    
+    .blog-meta {
+      color: #00ff00;
+      font-size: 0.9em;
+      font-style: italic;
+      margin-bottom: 1em;
+    }
+    
+    .blog-link {
+      display: inline-block;
+      padding: 0.5em 1em;
+      background: rgba(255, 0, 128, 0.2);
+      color: #ff0080;
+      text-decoration: none;
+      border-radius: 5px;
+      border: 1px solid #00ff00;
+      transition: all 0.3s ease;
+      font-weight: bold;
+    }
+    
+    .blog-link:hover {
+      background: rgba(255, 0, 128, 0.3);
+      text-shadow: 0 0 5px rgba(255, 0, 128, 0.5);
+      box-shadow: 0 0 10px rgba(255, 0, 128, 0.3);
+    }
+    
+    .blogs-header {
+      text-align: center;
+      margin-bottom: 2em;
+    }
+    
+    .blogs-header h1 {
+      color: #ff0080;
+      font-size: 2.5em;
+      margin-bottom: 0.5em;
+      text-shadow: 0 0 10px rgba(255, 0, 128, 0.5);
+    }
+    
+    .blogs-header p {
+      color: #00bfff;
+      font-size: 1.1em;
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+    
+    @media (max-width: 768px) {
+      .blog-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5em;
+      }
+      
+      .blog-card {
+        padding: 1em;
+      }
+      
+      .blogs-header h1 {
+        font-size: 2em;
+      }
+    }
+  </style>
+</head>
+<body>
+  <canvas id="matrix-bg"></canvas>
+  <div class="content">
+    <div class="blogs-header">
+      <h1>Development Blog</h1>
+      <p>Insights, lessons learned, and technical adventures from my journey as a software developer. Each post shares real experiences and practical knowledge gained from building applications and working in enterprise environments.</p>
+    </div>
+    
+    <div class="blog-grid">
+      <div class="blog-card">
+        <div class="blog-image fullstack"></div>
+        <h3 class="blog-title">Building My First Full-Stack Application</h3>
+        <p class="blog-meta">December 2024</p>
+        <p class="blog-description">
+          A deep dive into creating a React video recording app with Python FastAPI backend. 
+          Learn about the challenges of file uploads, streaming, and the integration between 
+          frontend and backend technologies.
+        </p>
+        <a href="test-post.html" class="blog-link">Read More →</a>
+      </div>
+      
+      <div class="blog-card">
+        <div class="blog-image automation"></div>
+        <h3 class="blog-title">Lessons from Automating Code Metrics at CGI</h3>
+        <p class="blog-meta">January 2025</p>
+        <p class="blog-description">
+          How I achieved a 3000% performance improvement through automation and platform 
+          migration. Real insights from working with encrypted files, Jenkins, and 
+          enterprise-level automation workflows.
+        </p>
+        <a href="automation-lessons.html" class="blog-link">Read More →</a>
+      </div>
+    </div>
+    
+    <div style="text-align: center; margin-top: 3em;">
+      <a href="../index.html" class="blog-back-link">← Back to Home</a>
+    </div>
+  </div>
+  <script src="../matrix.js"></script>
+</body>
+</html>
