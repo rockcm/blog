@@ -5,154 +5,191 @@
   <title>Blog Posts | Christian Rock</title>
   <link rel="stylesheet" href="../style.css">
   <style>
-    .blog-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-      gap: 2em;
-      margin: 2em 0;
-    }
-    
-    .blog-card {
-      background: rgba(0, 255, 0, 0.05);
-      border: 1px solid #00ff00;
-      border-radius: 10px;
-      padding: 1.5em;
-      transition: all 0.3s ease;
-      position: relative;
-      overflow: hidden;
-    }
-    
-    .blog-card:hover {
-      background: rgba(0, 255, 0, 0.1);
-      box-shadow: 0 0 20px rgba(0, 255, 0, 0.3);
-      transform: translateY(-5px);
-    }
-    
-    .blog-card::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 4px;
-      background: linear-gradient(90deg, #00ff00, #00ff88, #00ff00);
-    }
-    
-    .blog-image {
-      width: 100%;
-      height: 200px;
-      background: linear-gradient(135deg, rgba(0, 255, 0, 0.1), rgba(0, 255, 136, 0.2));
-      border-radius: 8px;
-      margin-bottom: 1em;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 3em;
-      color: #00ff88;
-      text-shadow: 0 0 10px rgba(0, 255, 136, 0.5);
-      position: relative;
-      overflow: hidden;
-    }
-    
-    .blog-image::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: repeating-linear-gradient(
-        45deg,
-        transparent,
-        transparent 10px,
-        rgba(0, 255, 0, 0.1) 10px,
-        rgba(0, 255, 0, 0.1) 20px
-      );
-    }
-    
-    .blog-image.fullstack::before {
-      content: '⚛️';
-      font-size: 4em;
-    }
-    
-    .blog-image.automation::before {
-      content: '⚙️';
-      font-size: 4em;
-    }
-    
-    .blog-title {
-      color: #00ff88;
-      font-size: 1.3em;
-      font-weight: bold;
-      margin-bottom: 0.5em;
-      text-shadow: 0 0 5px rgba(0, 255, 136, 0.3);
-    }
-    
-    .blog-description {
-      color: #00ff00;
-      line-height: 1.5;
-      margin-bottom: 1em;
-    }
-    
-    .blog-meta {
-      color: #00ff88;
-      font-size: 0.9em;
-      font-style: italic;
-      margin-bottom: 1em;
-    }
-    
-    .blog-link {
-      display: inline-block;
-      padding: 0.5em 1em;
-      background: rgba(0, 255, 0, 0.2);
-      color: #00ff88;
-      text-decoration: none;
-      border-radius: 5px;
-      border: 1px solid #00ff00;
-      transition: all 0.3s ease;
-      font-weight: bold;
-    }
-    
-    .blog-link:hover {
-      background: rgba(0, 255, 0, 0.3);
-      text-shadow: 0 0 5px rgba(0, 255, 136, 0.5);
-      box-shadow: 0 0 10px rgba(0, 255, 0, 0.3);
-    }
-    
-    .blogs-header {
-      text-align: center;
-      margin-bottom: 2em;
-    }
-    
-    .blogs-header h1 {
-      color: #00ff88;
-      font-size: 2.5em;
-      margin-bottom: 0.5em;
-      text-shadow: 0 0 10px rgba(0, 255, 136, 0.5);
-    }
-    
-    .blogs-header p {
-      color: #00ff00;
-      font-size: 1.1em;
-      max-width: 600px;
-      margin: 0 auto;
-      line-height: 1.6;
-    }
-    
-    @media (max-width: 768px) {
-      .blog-grid {
-        grid-template-columns: 1fr;
-        gap: 1.5em;
-      }
-      
-      .blog-card {
-        padding: 1em;
-      }
-      
-      .blogs-header h1 {
-        font-size: 2em;
-      }
-    }
+   /* Matrix-Cyberpunk Hybrid Theme */
+:root {
+  --pink: #ff66cc;
+  --green: #00ff66;
+  --blue: #00ffff;
+}
+
+/* Blog Grid Layout */
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2em;
+  margin: 2em 0;
+}
+
+/* Blog Card Container */
+.blog-card {
+  background: rgba(0, 0, 0, 0.85);
+  border: 1px solid var(--blue);
+  border-radius: 10px;
+  padding: 1.5em;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+}
+
+.blog-card:hover {
+  background: rgba(0, 255, 136, 0.05);
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.5);
+  transform: translateY(-5px);
+}
+
+/* Glowing Accent Line */
+.blog-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--blue), var(--pink), var(--blue));
+}
+
+/* Blog Image Block */
+/* Blog Image (Icon Block) */
+.blog-image {
+  width: 100%;
+  height: 200px;
+  border: 1px solid var(--blue, #00ffff);
+  border-radius: 8px;
+  margin-bottom: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4em;
+  color: var(--green, #00ff66);
+  background: rgba(0, 0, 0, 0.6); /* darker, so icons pop */
+  text-shadow: 0 0 15px rgba(0, 255, 255, 0.8);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Optional faint cyber lines behind icons */
+.blog-image::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 12px,
+    rgba(0, 255, 255, 0.08) 12px,
+    rgba(0, 255, 255, 0.08) 24px
+  );
+  pointer-events: none;
+}
+
+/* Icon Variants (restores your symbols) */
+.blog-image.fullstack::before {
+  content: '⚛️';        /* React icon */
+  position: relative;
+  z-index: 2;
+  font-size: 2em; 
+}
+
+.blog-image.automation::before {
+  content: '⚙️';        /* Gear icon */
+  position: relative;
+  z-index: 2;
+  font-size: 2em;  
+}
+
+
+/* Text Styling */
+.blog-title {
+  color: var(--pink);
+  font-size: 1.4em;
+  font-weight: bold;
+  margin-bottom: 0.5em;
+  text-shadow: 0 0 8px rgba(255, 102, 204, 0.7);
+}
+
+.blog-description {
+  color: var(--green);
+  line-height: 1.6;
+  margin-bottom: 1em;
+}
+
+.blog-meta {
+  color: var(--blue);
+  font-size: 0.9em;
+  font-style: italic;
+  margin-bottom: 1em;
+  opacity: 0.8;
+}
+
+/* Read More Button */
+.blog-link {
+  display: inline-block;
+  padding: 0.5em 1em;
+  background: rgba(0, 255, 255, 0.1);
+  color: var(--pink);
+  text-decoration: none;
+  border-radius: 5px;
+  border: 1px solid var(--blue);
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+.blog-link:hover {
+  background: rgba(255, 102, 204, 0.2);
+  box-shadow: 0 0 15px rgba(255, 102, 204, 0.4);
+  color: var(--green);
+}
+
+/* Page Header */
+.blogs-header {
+  text-align: center;
+  margin-bottom: 2em;
+}
+
+.blogs-header h1 {
+  color: var(--pink);
+  font-size: 2.5em;
+  margin-bottom: 0.5em;
+  text-shadow: 0 0 15px rgba(255, 102, 204, 0.8);
+}
+
+.blogs-header p {
+  color: var(--green);
+  font-size: 1.1em;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+.blog-back-link {
+  display: inline-block;
+  margin-top: 3em;
+  padding: 0.8em 1.5em;
+  background: rgba(0, 255, 255, 0.1);
+  color: var(--pink);
+  border: 1px solid var(--blue);
+  border-radius: 5px;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.blog-back-link:hover {
+  background: rgba(255, 102, 204, 0.2);
+  color: var(--green);
+  text-shadow: 0 0 10px var(--pink);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .blog-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5em;
+  }
+  .blogs-header h1 {
+    font-size: 2em;
+  }
+}
   </style>
 </head>
 <body>

@@ -58,7 +58,42 @@
     background: rgba(0, 0, 0, 0.3);
     padding: 1em;
     border-radius: 10px;
+    box-shadow: 0 0 20px rgb(0, 238, 255);
+    
   }
+
+#projects .project,
+#blog .project {
+  position: relative;                 /* allow an overlay inside the card */
+  border: 1px solid var(--blue, #00ffff);
+  border-radius: 10px;
+  padding: 1.25em;
+  color: var(--green, #00ff66);       /* neon green text for readability */
+  overflow: hidden;                   /* hide overlay edges */
+}
+
+/* Solid dark overlay so matrix chars don't show through */
+#projects .project::before,
+#blog .project::before {
+  content: "";
+  position: absolute;
+  inset: 0;                           /* cover the whole card */
+  background: rgba(0, 0, 0, 0.96);    /* ← make this 0.98 if you want it even darker */
+  z-index: 0;                         /* sit behind the text */
+}
+
+/* Ensure the actual content sits above the dark overlay */
+#projects .project > *,
+#blog .project > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Optional: subtle neon glow */
+#projects .project,
+#blog .project {
+  box-shadow: 0 0 14px rgba(0, 255, 255, 0.2);
+}
   
   footer {
     text-align: center;
@@ -100,11 +135,46 @@
   .contact a {
     color: #00ff88;
     text-decoration: none;
+  }.content p {
+    color: var(--green, #00ff66);
   }
   
   .contact a:hover {
     text-decoration: underline;
     text-shadow: 0 0 5px rgba(0, 255, 136, 0.5);
+  }
+
+
+  /* Contact section dark background */
+#contact {
+    position: relative;
+    border: 1px solid var(--blue, #00ffff);
+    border-radius: 10px;
+    padding: 1.5em;
+    margin-top: 2em;
+    color: var(--green, #00ff66);
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.25);
+  }
+  
+  /* Solid dark overlay — same as the project boxes */
+  #contact::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.96); /* make this 0.98 if you want even darker */
+    z-index: 0;
+  }
+  
+  /* Ensure the contact text sits above the dark overlay */
+  #contact > * {
+    position: relative;
+    z-index: 1;
+  }
+  
+  /* Optional: hover glow for interactive look */
+  #contact:hover {
+    box-shadow: 0 0 20px rgba(255, 102, 204, 0.4);
   }
   
   .section {
@@ -358,5 +428,101 @@
     .blog-post h1 {
       font-size: 2em;
     }
+  }
+  /* Cyberpunk color palette */
+:root {
+    --pink: #ff66cc;
+    --blue: #00ffff;
+    --background: rgba(0, 0, 0, 0.7);
+  }
+  
+  /* Reset defaults */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Consolas', monospace;
+    color: var(--blue);
+    overflow-x: hidden;
+    height: 100vh;
+    background: black;
+  }
+  
+  /* Matrix background */
+  #matrix-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    background: black;
+  }
+  
+  /* Content overlay */
+  .content {
+    position: relative;
+    z-index: 1;
+    background: var(--background);
+    color: var(--blue);
+    min-height: 100vh;
+    padding: 3em;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+    
+  }
+  
+  header {
+    text-align: center;
+    margin-bottom: 2em;
+  }
+  
+  header h1 {
+    color: var(--pink);
+    text-shadow: 0 0 15px rgba(255, 102, 204, 0.8);
+  }
+  
+  nav a {
+    color: var(--blue);
+    margin: 0 10px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  
+  nav a:hover {
+    color: var(--pink);
+    text-shadow: 0 0 8px var(--pink);
+  }
+  
+  section h2, .section-title {
+    color: var(--pink);
+    text-shadow: 0 0 10px rgba(255, 102, 204, 0.8);
+  }
+  
+  .project, .experience-item, .education, .skill-category {
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid var(--blue);
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+  }
+  
+  a {
+    color: var(--pink);
+    text-decoration: none;
+  }
+  
+  a:hover {
+    color: var(--blue);
+    text-shadow: 0 0 10px var(--blue);
+  }
+  
+  footer {
+    text-align: center;
+    margin-top: 3em;
+    color: var(--pink);
+    opacity: 0.8;
+    text-shadow: 0 0 10px rgba(255, 102, 204, 0.5);
   }
   
