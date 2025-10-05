@@ -61,39 +61,7 @@
     box-shadow: 0 0 20px rgb(0, 238, 255);
     
   }
-
-#projects .project,
-#blog .project {
-  position: relative;                 /* allow an overlay inside the card */
-  border: 1px solid var(--blue, #00ffff);
-  border-radius: 10px;
-  padding: 1.25em;
-  color: var(--green, #00ff66);       /* neon green text for readability */
-  overflow: hidden;                   /* hide overlay edges */
-}
-
-/* Solid dark overlay so matrix chars don't show through */
-#projects .project::before,
-#blog .project::before {
-  content: "";
-  position: absolute;
-  inset: 0;                           /* cover the whole card */
-  background: rgba(0, 0, 0, 0.96);    /* ← make this 0.98 if you want it even darker */
-  z-index: 0;                         /* sit behind the text */
-}
-
-/* Ensure the actual content sits above the dark overlay */
-#projects .project > *,
-#blog .project > * {
-  position: relative;
-  z-index: 1;
-}
-
-/* Optional: subtle neon glow */
-#projects .project,
-#blog .project {
-  box-shadow: 0 0 14px rgba(0, 255, 255, 0.2);
-}
+  
   
   footer {
     text-align: center;
@@ -142,39 +110,6 @@
   .contact a:hover {
     text-decoration: underline;
     text-shadow: 0 0 5px rgba(0, 255, 136, 0.5);
-  }
-
-
-  /* Contact section dark background */
-#contact {
-    position: relative;
-    border: 1px solid var(--blue, #00ffff);
-    border-radius: 10px;
-    padding: 1.5em;
-    margin-top: 2em;
-    color: var(--green, #00ff66);
-    overflow: hidden;
-    box-shadow: 0 0 15px rgba(0, 255, 255, 0.25);
-  }
-  
-  /* Solid dark overlay — same as the project boxes */
-  #contact::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.96); /* make this 0.98 if you want even darker */
-    z-index: 0;
-  }
-  
-  /* Ensure the contact text sits above the dark overlay */
-  #contact > * {
-    position: relative;
-    z-index: 1;
-  }
-  
-  /* Optional: hover glow for interactive look */
-  #contact:hover {
-    box-shadow: 0 0 20px rgba(255, 102, 204, 0.4);
   }
   
   .section {
