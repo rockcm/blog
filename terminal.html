@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore Christian Rock's software, automation, and delivery work through an interactive Linux terminal.">
+  <meta name="theme-color" content="#05050a">
+  <title>Interactive Terminal | Christian Rock</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="terminal.css">
+</head>
+<body class="terminal-page">
+  <a class="skip-link" href="#terminal-input">Skip to terminal</a>
+  <canvas id="matrix-bg" aria-hidden="true"></canvas>
+  <div class="noise" aria-hidden="true"></div>
+  <header class="site-header subpage-header">
+    <a class="brand" href="index.html#home" aria-label="Christian Rock, home"><span class="brand-mark">CR</span><span class="brand-name">CHRISTIAN<span>.DEV</span></span></a>
+    <nav aria-label="Primary navigation"><a href="index.html#home">Home</a><a href="index.html#about">About</a><a href="index.html#services">Services</a><a href="index.html#experience">Experience</a><a href="index.html#projects">Work</a><a href="terminal.html" aria-current="page">Terminal</a><a href="index.html#contact">Contact</a></nav>
+    <a class="header-cta" href="index.html?contact=open">Start a project</a>
+  </header>
+
+  <main class="terminal-main" id="main-content">
+    <header class="terminal-intro">
+      <p class="eyebrow"><span></span> INTERACTIVE MODE / SAFE SHELL</p>
+      <h1>Explore the work<br><em>from the command line.</em></h1>
+      <p>This is a browser-based mock Linux shell&mdash;no system access, just projects, experience, services, and a few hidden commands.</p>
+    </header>
+
+    <section class="terminal-window" aria-label="Interactive portfolio terminal">
+      <div class="terminal-titlebar">
+        <div class="terminal-controls" aria-hidden="true"><i></i><i></i><i></i></div>
+        <span>christian@portfolio: <b data-terminal-title-path>~</b></span>
+        <span class="terminal-status"><i></i> SESSION ACTIVE</span>
+      </div>
+      <div class="terminal-screen" data-terminal-screen>
+        <div class="terminal-output" data-terminal-output aria-live="polite" aria-atomic="false"></div>
+        <form class="terminal-command" data-terminal-form autocomplete="off">
+          <label class="terminal-prompt" for="terminal-input"><span>christian@portfolio</span>:<b data-terminal-path>~</b>$</label>
+          <input id="terminal-input" data-terminal-input type="text" inputmode="text" autocomplete="off" autocapitalize="none" spellcheck="false" aria-describedby="terminal-help">
+        </form>
+      </div>
+      <section class="vim-editor" data-vim-editor hidden aria-label="Vim-like virtual file editor">
+        <div class="vim-buffer">
+          <pre class="vim-line-numbers" data-vim-lines aria-hidden="true">1</pre>
+          <textarea class="vim-textarea" data-vim-textarea autocomplete="off" autocapitalize="none" spellcheck="false" aria-label="Virtual file contents"></textarea>
+        </div>
+        <div class="vim-command-row" data-vim-command-row hidden>
+          <span>:</span>
+          <form data-vim-command-form autocomplete="off"><input data-vim-command-input type="text" autocomplete="off" autocapitalize="none" spellcheck="false" aria-label="Vim command"></form>
+        </div>
+        <div class="vim-message" data-vim-message aria-live="polite"></div>
+        <div class="vim-statusline">
+          <strong data-vim-mode>NORMAL</strong>
+          <span data-vim-file>[No Name]</span>
+          <span data-vim-position>1,1</span>
+        </div>
+        <div class="vim-mobile-controls" aria-label="Editor controls">
+          <button type="button" data-vim-action="escape">ESC</button>
+          <button type="button" data-vim-action="insert">INSERT</button>
+          <button type="button" data-vim-action="command">:</button>
+          <button type="button" data-vim-action="undo">UNDO</button>
+          <button type="button" data-vim-action="save">SAVE</button>
+          <button type="button" data-vim-action="quit">QUIT</button>
+        </div>
+      </section>
+      <div class="terminal-footer" data-terminal-footer>
+        <span id="terminal-help">TYPE <b>help</b> TO SEE COMMANDS</span>
+        <span><kbd>&uarr;</kbd><kbd>&darr;</kbd> HISTORY <kbd>TAB</kbd> COMPLETE / DOUBLE-TAB LIST <kbd>CTRL</kbd>+<kbd>L</kbd> CLEAR</span>
+      </div>
+    </section>
+
+    <div class="terminal-quick-commands" data-terminal-quick aria-label="Suggested terminal commands">
+      <span>TRY A COMMAND:</span>
+      <button type="button" data-run-command="cd projects">cd projects</button>
+      <button type="button" data-run-command="neofetch">neofetch</button>
+      <button type="button" data-run-command="services">services</button>
+      <button type="button" data-run-command="sudo hire christian">sudo hire christian</button>
+    </div>
+  </main>
+
+  <footer class="site-footer terminal-site-footer"><span>&copy; 2026 Christian Rock</span><div><a href="index.html">Home</a><a href="posts/resume.html">Resume</a><a href="https://github.com/rockcm" target="_blank" rel="noreferrer">GitHub</a></div><span>SESSION: LOCAL</span></footer>
+  <script src="matrix.js"></script>
+  <script src="terminal.js"></script>
+</body>
+</html>

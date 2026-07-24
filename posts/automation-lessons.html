@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lessons from Modernizing Code Metrics | Christian Rock</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <canvas id="matrix-bg" aria-hidden="true"></canvas>
+  <div class="noise" aria-hidden="true"></div>
+  <header class="site-header subpage-header">
+    <a class="brand" href="../index.html#home" aria-label="Christian Rock, home"><span class="brand-mark">CR</span><span class="brand-name">CHRISTIAN<span>.DEV</span></span></a>
+    <nav aria-label="Primary navigation"><a href="../index.html#home">Home</a><a href="../index.html#about">About</a><a href="../index.html#services">Services</a><a href="../index.html#experience">Experience</a><a href="../index.html#projects" aria-current="page">Work</a><a href="../terminal.html">Terminal</a><a href="../index.html#contact">Contact</a></nav>
+    <a class="header-cta" href="../index.html?contact=open">Start a project</a>
+  </header>
+  <main class="content" id="main-content">
+    <div class="blog-post">
+      <h1>Lessons from Modernizing Code Metrics</h1>
+      <p class="blog-date">Date: January 2025</p>
+      <p>
+        Enterprise automation work has shown me how much a well-designed internal workflow
+        can improve a development team&rsquo;s day-to-day experience. This article shares general
+        lessons from modernizing a legacy metrics process while omitting employer, client,
+        system, scale, and implementation details.
+      </p>
+      
+      <h2>The Problem</h2>
+      <p>
+        Our existing code counting process was running on Windows and was painfully slow. 
+        What used to take hours could be reduced to minutes with the right approach. 
+        The challenge wasn't just about speed - it was about reliability, maintainability, 
+        and integration with our existing CI/CD pipeline.
+      </p>
+      
+      <h2>The Solution</h2>
+      <p>
+        I migrated the entire process from Windows to Linux and implemented several 
+        automation scripts using Python. The key was not just changing the platform, 
+        but rethinking the entire workflow:
+      </p>
+      
+      <ul>
+        <li><strong>Platform Migration:</strong> Moved from Windows to Linux for better performance</li>
+        <li><strong>Python Automation:</strong> Replaced repetitive steps with maintainable scripts</li>
+        <li><strong>Workflow Integration:</strong> Made execution consistent and repeatable</li>
+        <li><strong>Error Handling:</strong> Implemented robust error handling and logging</li>
+      </ul>
+      
+      <h2>Key Technical Insights</h2>
+      <p>
+        <strong>Configuration Management:</strong> Automation is only dependable when its
+        configuration is handled deliberately. Clear boundaries, safe defaults, and documented
+        ownership keep a workflow maintainable.
+      </p>
+      
+      <p>
+        <strong>Performance Optimization:</strong> The improvement did not come from
+        one magic solution, but from multiple optimizations working together&mdash;better
+        algorithms, more efficient I/O operations, and parallel processing where possible.
+      </p>
+      
+      <h2>Lessons Learned</h2>
+      <ul>
+        <li>Always measure before and after - metrics matter</li>
+        <li>Automation is only as good as its error handling</li>
+        <li>Documentation is crucial for team adoption</li>
+        <li>Sometimes the biggest wins come from platform changes, not just code optimization</li>
+      </ul>
+      
+      <h2>Impact</h2>
+      <p>
+        This project not only improved our team's efficiency but also gave me hands-on 
+        experience designing maintainable enterprise automation. The performance gains
+        have allowed our team to focus on higher-value work instead of waiting for 
+        processes to complete.
+      </p>
+      
+      <a href="../index.html" class="blog-back-link">← Back to Home</a>
+    </div>
+  </main>
+  <script src="../matrix.js"></script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="General engineering principles for designing reliable enterprise build and release automation.">
+  <title>Designing Reliable Enterprise Delivery Automation | Christian Rock</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <canvas id="matrix-bg" aria-hidden="true"></canvas><div class="noise" aria-hidden="true"></div>
+  <div class="page-shell">
+    <header class="site-header subpage-header">
+      <a class="brand" href="../index.html#home" aria-label="Christian Rock, home"><span class="brand-mark">CR</span><span class="brand-name">CHRISTIAN<span>.DEV</span></span></a>
+      <nav aria-label="Primary navigation"><a href="../index.html#home">Home</a><a href="../index.html#about">About</a><a href="../index.html#services">Services</a><a href="../index.html#experience">Experience</a><a href="../index.html#projects" aria-current="page">Work</a><a href="../terminal.html">Terminal</a><a href="../index.html#contact">Contact</a></nav>
+      <a class="header-cta" href="../index.html?contact=open">Start a project</a>
+    </header>
+    <article class="article">
+      <header class="article-header">
+        <span class="article-kicker">ENTERPRISE DELIVERY / CASE STUDY</span>
+        <h1>Designing reliable enterprise delivery automation</h1>
+        <p class="article-deck">General engineering principles for improving feedback, consistency, traceability, and repeatability across a large application portfolio.</p>
+        <div class="article-meta"><span>6 MIN READ</span><span>PLATFORM ENGINEERING / AUTOMATION</span><span>IMPLEMENTATION DETAILS OMITTED</span></div>
+      </header>
+
+      <p>Reliable software delivery is more than getting one build to pass. The surrounding system has to give developers useful feedback, produce consistent outputs, keep configuration reviewable, and make releases understandable to the people operating them.</p>
+
+      <div class="article-callout"><p><strong>The result:</strong> a reusable delivery model that improved pull-request feedback, artifact consistency, configuration management, and repeatable releases while reducing manual coordination.</p></div>
+
+      <h2>The engineering goals</h2>
+      <p>I approached the work as a product for development and operations teams. That meant designing around a small set of durable qualities rather than coupling the solution to one application or tool.</p>
+      <div class="architecture" aria-label="Enterprise delivery engineering goals">
+        <div><b>01 / FEEDBACK</b>Validate changes early enough to be useful</div>
+        <div><b>02 / CONSISTENCY</b>Apply reusable patterns across applications</div>
+        <div><b>03 / TRACEABILITY</b>Make build outputs easy to identify and follow</div>
+        <div><b>04 / REPEATABILITY</b>Keep configuration reviewable and predictable</div>
+        <div><b>05 / OWNERSHIP</b>Give operators clear workflows and documentation</div>
+      </div>
+
+      <h2>Make feedback intentional</h2>
+      <p>Different events should answer different questions. Pull-request automation should quickly tell a developer whether a change is safe to merge. Release-oriented automation should focus on producing a dependable output. Keeping those responsibilities clear makes feedback faster and failures easier to understand.</p>
+
+      <h2>Create a stable handoff</h2>
+      <p>A delivery system becomes easier to reason about when each successful build produces a known, versioned output. Downstream release automation can promote that output without rebuilding it, improving traceability and reducing differences between stages.</p>
+
+      <h2>Treat configuration like software</h2>
+      <p>Application delivery depends on configuration as much as executable code. Keeping configuration structured, versioned, and reviewable turns environment setup into a repeatable engineering process instead of relying on one-off knowledge.</p>
+
+      <h2>Design for the people operating it</h2>
+      <p>Automation still needs ownership. Clear logs, predictable inputs, documented recovery steps, and well-defined responsibilities make a release workflow maintainable after its first successful run.</p>
+
+      <h2>Leadership beyond implementation</h2>
+      <p>The work also required translating ambiguous automation needs into scoped tasks, supporting technical decisions, reviewing progress, and mentoring teammates. A reliable system includes both maintainable technology and a team that understands how to evolve it.</p>
+
+      <h2>What this work taught me</h2>
+      <ul>
+        <li><strong>Scale rewards conventions.</strong> Reusable patterns reduce drift and make automation easier to support.</li>
+        <li><strong>Feedback and release outputs have different jobs.</strong> Designing for both makes each workflow clearer.</li>
+        <li><strong>Stable artifacts create clean handoffs.</strong> A known output is easier to trace and promote.</li>
+        <li><strong>Configuration deserves engineering discipline.</strong> It is a core part of reliable delivery.</li>
+        <li><strong>Operations need ownership.</strong> Documentation and recovery paths matter as much as the happy path.</li>
+        <li><strong>Technical leadership multiplies impact.</strong> Clear boundaries, review, and mentoring help teams contribute confidently.</li>
+      </ul>
+
+      <p><em>This article presents general engineering principles from enterprise delivery work. Employer, client, system, scale, security, and implementation details are intentionally omitted.</em></p>
+      <footer class="article-footer"><a href="../index.html#projects">&larr; Back to selected work</a><a href="calcounter.html">Next: CalCounter &rarr;</a></footer>
+    </article>
+  </div>
+  <script src="../matrix.js"></script>
+</body>
+</html>
