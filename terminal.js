@@ -59,6 +59,7 @@ if (terminalScreen && terminalOutput && terminalForm && terminalInput) {
       "README.md",
       "delivery-automation.md",
       "calcounter.md",
+      "certificate-rotation.md",
       "casino-blackjack.md",
       "ufc-fight-predictor.md"
     ],
@@ -106,6 +107,7 @@ if (terminalScreen && terminalOutput && terminalForm && terminalInput) {
       "",
       "delivery-automation.md       Enterprise build and release automation",
       "calcounter.md                Local-first desktop nutrition tracker",
+      "certificate-rotation.md      Technical leadership for rotation automation",
       "casino-blackjack.md          Responsive blackjack game",
       "ufc-fight-predictor.md       Fight analysis and probability application",
       "",
@@ -126,6 +128,14 @@ if (terminalScreen && terminalOutput && terminalForm && terminalInput) {
       "Uses USDA FoodData Central for food search and nutrition data.",
       "Includes serving conversion, result ranking, daily goals, and history.",
       "Run `open calcounter` to view the source."
+    ].join("\n"),
+    "/home/christian/projects/certificate-rotation.md": [
+      "# Certificate Rotation Automation",
+      "",
+      "Led a team of five interns delivering certificate-rotation automation.",
+      "Translated an ambiguous need into scoped, reviewable engineering work.",
+      "Guided technical decisions, reviews, documentation, mentoring, and handoff.",
+      "Employer, system, scale, and implementation details are omitted."
     ].join("\n"),
     "/home/christian/projects/casino-blackjack.md": [
       "# CasinoBlackJack",
@@ -1040,16 +1050,18 @@ if (terminalScreen && terminalOutput && terminalForm && terminalInput) {
   }
 
   function printProjects() {
-    writeLine("SELECTED WORK / 5 RESULTS", "accent");
+    writeLine("SELECTED WORK / 6 RESULTS", "accent");
     writeBlock(
       "<strong>01  Enterprise Delivery Automation</strong> <span class='pink'>PLATFORM ENGINEERING</span><br>" +
       "Reusable automation for faster feedback, consistent outputs, and repeatable releases.<br><br>" +
       "<strong>02  CalCounter</strong> <span class='pink'>ELECTRON / USDA API</span><br>" +
       "Local-first nutrition tracking desktop application. <a href='posts/calcounter.html'>case study &nearr;</a><br><br>" +
-      "<strong>03  Code Metrics Modernization</strong> <span class='pink'>PYTHON / LINUX</span><br>" +
+      "<strong>03  Certificate Rotation Automation</strong> <span class='pink'>LEADERSHIP / SECURITY</span><br>" +
+      "Technical leadership for five interns delivering secure, maintainable rotation automation.<br><br>" +
+      "<strong>04  Code Metrics Modernization</strong> <span class='pink'>PYTHON / LINUX</span><br>" +
       "Linux migration and automated metrics workflows.<br><br>" +
-      "<strong>04  CasinoBlackJack</strong> <span class='pink'>GAME DEVELOPMENT</span> &nbsp;<a href='https://rockcm.github.io/CasinoBlackJack/' target='_blank' rel='noreferrer'>open &nearr;</a><br>" +
-      "<strong>05  UFC Fight Predictor</strong> <span class='pink'>FASTAPI / REACT</span> &nbsp;<a href='https://github.com/rockcm/UFCFightPredictor' target='_blank' rel='noreferrer'>source &nearr;</a>"
+      "<strong>05  CasinoBlackJack</strong> <span class='pink'>GAME DEVELOPMENT</span> &nbsp;<a href='https://rockcm.github.io/CasinoBlackJack/' target='_blank' rel='noreferrer'>open &nearr;</a><br>" +
+      "<strong>06  UFC Fight Predictor</strong> <span class='pink'>FASTAPI / REACT</span> &nbsp;<a href='https://github.com/rockcm/UFCFightPredictor' target='_blank' rel='noreferrer'>source &nearr;</a>"
     );
     writeLine("Tip: use `open calcounter`, `open blackjack`, `open ufc`, or `open work`.", "muted");
   }
